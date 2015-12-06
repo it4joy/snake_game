@@ -10,7 +10,7 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, my world!");
+            
             Console.ReadLine();
         }
     }
