@@ -1,0 +1,6 @@
+D:\design\Web-design -- Web-dev\Geektimes - Школа программирования\C#\snake_game-work\snake_game\snake_game\bin\Debug\snake_game.exe.config
+D:\design\Web-design -- Web-dev\Geektimes - Школа программирования\C#\snake_game-work\snake_game\snake_game\bin\Debug\snake_game.exe
+D:\design\Web-design -- Web-dev\Geektimes - Школа программирования\C#\snake_game-work\snake_game\snake_game\bin\Debug\snake_game.pdb
+D:\design\Web-design -- Web-dev\Geektimes - Школа программирования\C#\snake_game-work\snake_game\snake_game\obj\Debug\snake_game.csprojResolveAssemblyReference.cache
+D:\design\Web-design -- Web-dev\Geektimes - Школа программирования\C#\snake_game-work\snake_game\snake_game\obj\Debug\snake_game.exe
+D:\design\Web-design -- Web-dev\Geektimes - Школа программирования\C#\snake_game-work\snake_game\snake_game\obj\Debug\snake_game.pdb
