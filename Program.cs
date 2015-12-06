@@ -22,6 +22,12 @@ namespace snake_game
             p2.symb = '#';
             p2.Draw();
 
+            Point p3 = new Point();
+            p3.x = 10;
+            p3.y = 20;
+            p3.symb = 'C';
+            p3.Draw();
+
             Console.ReadLine();
         }
     }
