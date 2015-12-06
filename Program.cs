@@ -10,14 +10,15 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1, 3, '*');
+            RAM obj = new RAM(10, 14);
+            obj.construct();
+
+            Point p1 = new Point(10, 15, 'L');
+            p1.x = 1;
+            p1.x = 50;
+            p1.y = 20;
+            p1.symb = '/';
             p1.Draw();
-
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
-
-            Point p3 = new Point(10, 20, 'C');
-            p3.Draw();
 
             Console.ReadLine();
         }
