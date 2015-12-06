@@ -28,6 +28,8 @@ namespace snake_game
             p3.symb = 'C';
             p3.Draw();
 
+            // simple test for GitHub Desktop;
+
             Console.ReadLine();
         }
     }
