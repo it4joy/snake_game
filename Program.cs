@@ -12,15 +12,6 @@ namespace snake_game
         {
             Console.SetBufferSize( 80, 25 );
 
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
-
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
-
-            Point p3 = new Point(10, 20, 'C');
-            p3.Draw();
-
             // frame rendering;
             HorizontalLine topLine = new HorizontalLine( 0, 78, 0, '+');
             HorizontalLine bottomLine = new HorizontalLine( 0, 78, 24, '+');
@@ -30,6 +21,11 @@ namespace snake_game
             bottomLine.DrawMain();
             leftLine.DrawMain();
             rightLine.DrawMain();
+
+            // point rendering;
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake( p, 4, Direction.RIGHT );
+            snake.DrawMain();
 
             Console.ReadLine();
         }

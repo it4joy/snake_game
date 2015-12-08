@@ -23,10 +23,42 @@ namespace snake_game
             symb = _symb;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            symb = p.symb;
+        }
+
+        public void Move(int offset, Direction dir)
+        {
+            if(dir == Direction.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if(dir == Direction.LEFT)
+            {
+                x = x - offset;
+            }
+            else if(dir == Direction.UP)
+            {
+                y = y + offset;
+            }
+            else if(dir == Direction.DOWN)
+            {
+                y = y - offset;
+            }
+        }
+
         public void Draw() // 'void' - it's means, that this function returns nothing;
         {
             Console.SetCursorPosition(x, y);
             Console.Write(symb);
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + symb;
         }
     }
 }
