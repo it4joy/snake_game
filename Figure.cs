@@ -8,9 +8,9 @@ namespace snake_game
 {
     class Figure
     {
-        List<Point> pList;
+        protected List<Point> pList;
 
-        public void DrawVertLine()
+        public void DrawMain()
         {
             foreach (Point p in pList)
             {

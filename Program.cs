@@ -21,14 +21,15 @@ namespace snake_game
             Point p3 = new Point(10, 20, 'C');
             p3.Draw();
 
+            // frame rendering;
             HorizontalLine topLine = new HorizontalLine( 0, 78, 0, '+');
             HorizontalLine bottomLine = new HorizontalLine( 0, 78, 24, '+');
             VerticalLine leftLine = new VerticalLine( 0, 24, 0, '+');
             VerticalLine rightLine = new VerticalLine( 0, 24, 78, '+');
-            topLine.DrawHorLine();
-            bottomLine.DrawHorLine();
-            leftLine.DrawVertLine();
-            rightLine.DrawVertLine();
+            topLine.DrawMain();
+            bottomLine.DrawMain();
+            leftLine.DrawMain();
+            rightLine.DrawMain();
 
             Console.ReadLine();
         }
