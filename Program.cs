@@ -16,9 +16,13 @@ namespace snake_game
             Point p1 = new Point(10, 15, 'L');
             p1.x = 1;
             p1.x = 50;
+            p1.x = p1.x - 50;
             p1.y = 20;
             p1.symb = '/';
             p1.Draw();
+
+            Point p2 = new Point(12, 17, 'G');
+            p2.Draw();
 
             Console.ReadLine();
         }
