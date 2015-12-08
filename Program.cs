@@ -10,6 +10,8 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
+            Console.SetBufferSize( 80, 25 );
+
             Point p1 = new Point(1, 3, '*');
             p1.Draw();
 
@@ -19,8 +21,14 @@ namespace snake_game
             Point p3 = new Point(10, 20, 'C');
             p3.Draw();
 
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
-            line.DrawLine();
+            HorizontalLine topLine = new HorizontalLine( 0, 78, 0, '+');
+            HorizontalLine bottomLine = new HorizontalLine( 0, 78, 24, '+');
+            VerticalLine leftLine = new VerticalLine( 0, 24, 0, '+');
+            VerticalLine rightLine = new VerticalLine( 0, 24, 78, '+');
+            topLine.DrawHorLine();
+            bottomLine.DrawHorLine();
+            leftLine.DrawVertLine();
+            rightLine.DrawVertLine();
 
             Console.ReadLine();
         }

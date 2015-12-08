@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace snake_game
 {
-    class HorizontalLine
+    class VerticalLine
     {
         List<Point> pList;
 
-        public HorizontalLine(int xLeft, int xRight, int y, char symb)
+        public VerticalLine(int yTop, int yBottom, int x, char symb)
         {
-            pList = new List<Point>(); // list of Points;
+            pList = new List<Point>();
 
-            for (int x = xLeft; x <= xRight; x++)
+            for (int y = yTop; y <= yBottom; y++)
             {
                 Point p = new Point( x, y, symb );
                 pList.Add( p );
             }
         }
 
-        public void DrawHorLine()
+        public void DrawVertLine()
         {
-            foreach (Point p in pList)
+            foreach(Point p in pList)
             {
                 p.Draw();
             }
