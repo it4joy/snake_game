@@ -56,6 +56,12 @@ namespace snake_game
             Console.Write(symb);
         }
 
+        public void Clear()
+        {
+            symb = ' ';
+            Draw();
+        }
+
         public override string ToString()
         {
             return x + ", " + y + ", " + symb;
