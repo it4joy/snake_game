@@ -27,16 +27,20 @@ namespace snake_game
             Point p = new Point(4, 5, '*');
             Snake snake = new Snake( p, 4, Direction.RIGHT );
             snake.DrawMain();
-            snake.Move();
-            Thread.Sleep( 300 );
-            snake.Move();
-            Thread.Sleep( 300 );
-            snake.Move();
-            Thread.Sleep( 300 );
-            snake.Move();
-            Thread.Sleep( 300 );
 
-            Console.ReadLine();
+            // keyboard control;
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey(); // get the touch of a button;
+                    snake.ActiveKey(key.Key);
+                }
+                Thread.Sleep( 300 );
+                snake.Move();
+            }
+
+            // Console.ReadLine();
         }
     }
 }

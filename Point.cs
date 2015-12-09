@@ -42,11 +42,11 @@ namespace snake_game
             }
             else if(dir == Direction.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
             else if(dir == Direction.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
 
