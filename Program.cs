@@ -11,22 +11,26 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize( 80, 25 );
-
-            // frame rendering;
-            HorizontalLine topLine = new HorizontalLine( 0, 78, 0, '+');
-            HorizontalLine bottomLine = new HorizontalLine( 0, 78, 24, '+');
-            VerticalLine leftLine = new VerticalLine( 0, 24, 0, '+');
-            VerticalLine rightLine = new VerticalLine( 0, 24, 78, '+');
-            topLine.DrawMain();
-            bottomLine.DrawMain();
-            leftLine.DrawMain();
-            rightLine.DrawMain();
+            VerticalLine v1 = new VerticalLine( 0, 10, 5, '%' );
+            v1.DrawMain();
 
             // point rendering;
             Point p = new Point(4, 5, '*');
-            Snake snake = new Snake( p, 4, Direction.RIGHT );
-            snake.DrawMain();
+            Figure fSnake = new Snake(p, 4, Direction.RIGHT);
+            fSnake.DrawMain();
+            Snake snake = (Snake) fSnake;
+
+            HorizontalLine h1 = new HorizontalLine( 0, 5, 6, '&' );
+
+            List<Figure> figures = new List<Figure>();
+            figures.Add( fSnake );
+            figures.Add( v1 );
+            figures.Add( h1 );
+
+            foreach (var f in figures)
+            {
+                f.DrawMain();
+            }
 
             // food;
             FoodCreator foodCreator = new FoodCreator( 80, 25, '$' );
@@ -53,8 +57,6 @@ namespace snake_game
                     snake.ActiveKey(key.Key);
                 }
             }
-
-            // Console.ReadLine();
         }
     }
 }

@@ -18,5 +18,14 @@ namespace snake_game
                 pList.Add( p );
             }
         }
+
+        public override void DrawMain()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+            base.DrawMain();
+
+            Console.ForegroundColor = ConsoleColor.White;
+        }
     }
 }
