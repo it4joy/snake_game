@@ -11,26 +11,14 @@ namespace snake_game
     {
         static void Main(string[] args)
         {
-            VerticalLine v1 = new VerticalLine( 0, 10, 5, '%' );
-            v1.DrawMain();
+            Console.SetBufferSize( 80, 25 );
+            Walls walls = new Walls( 80, 25 );
+            walls.DrawMain();
 
             // point rendering;
             Point p = new Point(4, 5, '*');
-            Figure fSnake = new Snake(p, 4, Direction.RIGHT);
-            fSnake.DrawMain();
-            Snake snake = (Snake) fSnake;
-
-            HorizontalLine h1 = new HorizontalLine( 0, 5, 6, '&' );
-
-            List<Figure> figures = new List<Figure>();
-            figures.Add( fSnake );
-            figures.Add( v1 );
-            figures.Add( h1 );
-
-            foreach (var f in figures)
-            {
-                f.DrawMain();
-            }
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.DrawMain();
 
             // food;
             FoodCreator foodCreator = new FoodCreator( 80, 25, '$' );
@@ -39,6 +27,10 @@ namespace snake_game
 
             while (true)
             {
+                if (walls.IsHit(snake) || snake.IsHitTail())
+                {
+                    break;
+                }
                 if (snake.Eat(food))
                 {
                     food = foodCreator.CreateFood();
