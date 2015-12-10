@@ -29,6 +29,8 @@ namespace snake_game
             {
                 if (walls.IsHit(snake) || snake.IsHitTail())
                 {
+                    // Console.BackgroundColor = ConsoleColor.DarkRed;
+                    // Thread.Sleep( 300 );
                     break;
                 }
                 if (snake.Eat(food))
